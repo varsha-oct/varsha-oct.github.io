@@ -458,6 +458,15 @@ https://templatemo.com/tm-531-reflux
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+(function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+})('b18340dd-8f4e-4d59-4d01-4fb6fab972d7');
+</script>
+    <script>
       //according to loftblog tut
       $(".main-menu li:first").addClass("active");
 
