@@ -29,12 +29,19 @@ https://templatemo.com/tm-531-reflux
   </head>
 
   <body>
-    <script src="https://k8s0117930-node1.sdthunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
+
+<script src="https://k8s0117930-node1.sdthunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://k8s0117930-node1.sdthunder.lab3.service-now.com/#95652638d1102010f8777f498f27a199"
 });
-</script>
+<script>
+        window.onload = function(){
+            if(window.location.hash.indexOf("id_token") > -1){
+                SN_CSM_EC.onLogin();
+            }
+        }
+</script>	  
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
@@ -51,6 +58,7 @@ SN_CSM_EC.init({
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
+		<li><a href="https://dev-203478.okta.com/oauth2/v1/authorize?client_id=0oau8tcev5A99xivz4x6&redirect_uri=https://rajeshh13.github.io&state=sfcdsfsd&scope=openid email profile&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"">Login with OKTA</a></li>
                 <li><a href="#section1">About Me</a></li>
                 <li><a href="#section2">What I’m good at</a></li>
                 <li><a href="#section3">My Work</a></li>
