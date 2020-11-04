@@ -30,11 +30,18 @@ https://templatemo.com/tm-531-reflux
 
   <body>
 
-<script src="https://k8s0117930-node1.sdthunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
+<script src="https://k8s0117372-node1.thunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://k8s0117930-node1.sdthunder.lab3.service-now.com/#3ef9dc49d1142010f8777f498f27a1a8"
+	moduleID: "https://k8s0117372-node1.thunder.lab3.service-now.com/#2b18fb094514a010f877949f5f956609",
+	tokenCallBack: getTokenCallBack 
 });
+function getTokenCallBack(){
+	let idToken; 
+	let params = window.location.hash.substring(1).split(“&”);
+	idToken = params[0].split(“=”)[1];
+	return Promise.resolve(idToken); 
+}
 </script>
 <script>
         window.onload = function(){
@@ -56,12 +63,11 @@ SN_CSM_EC.init({
             <div class="author-content">
               <h4>Reflux Me</h4>
               <span>Web Designer</span>
-		<a class="logInLInk" href="https://dev-203478.okta.com/oauth2/v1/authorize?client_id=0oau8tcev5A99xivz4x6&redirect_uri=https://rajeshh13.github.io&state=sfcdsfsd&scope=openid email profile&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"
+		<a class="logInLInk" href="https://dev-4237775.okta.com/oauth2/v1/authorize?client_id=0oajelji1gGMiIcLo5d5&redirect_uri=https://kamal6902.github.io&state=sfcdsfsd&scope=openid email profile&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"
           class="btn btn-info" id="loginButton">Login With Okta</a>
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-		<li><a href="https://dev-203478.okta.com/oauth2/v1/authorize?client_id=0oau8tcev5A99xivz4x6&redirect_uri=https://rajeshh13.github.io&state=sfcdsfsd&scope=openid email profile&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf">Login with OKTA</a></li>
                 <li><a href="#section1">About Me</a></li>
                 <li><a href="#section2">What I’m good at</a></li>
                 <li><a href="#section3">My Work</a></li>
