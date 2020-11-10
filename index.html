@@ -74,8 +74,13 @@
 		<script src="https://k8s0117372-node1.thunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://k8s0117372-node1.thunder.lab3.service-now.com/#a4f809724558a410f877949f5f956611"
+	moduleID: "https://k8s0117372-node1.thunder.lab3.service-now.com/#b943ea034518e410f877949f5f9566d0",
+	tokenCallBack: getTokenCallBack 
 });
+function getTokenCallBack(){
+			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1]; 
+			return Promise.resolve(idToken); 
+		}
 
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
 /* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
