@@ -75,7 +75,12 @@
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://bolt1.service-now.com/#44044571db682810d44e5a87dc9619f6",
-});
+	tokenCallBack: getTokenCallBack 
+	});
+	function getTokenCallBack(){
+			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1]; 
+			return Promise.resolve(idToken); 
+	}
 
 
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
