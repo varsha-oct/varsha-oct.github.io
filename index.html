@@ -25,7 +25,7 @@
 	</script> 	
 	<body>
 		<h1>Welcome to TPP (Token based)</h1>
-		 <a id="login" href="https://dev-4237775.okta.com/oauth2/v1/authorize?client_id=0oa128v3eWvzDR62n5d6&redirect_uri=https://kamal6902.github.io&state=1&scope=openid offline_access email&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"class="goclick">Login with Okta</a> 
+		 <a id="login" href="https://dev-4237775.okta.com/oauth2/v1/authorize?client_id=0oa1bpw2rMSuy3PjL5d6&redirect_uri=https://varsha-oct.github.io&state=1&scope=openid offline_access email&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"class="goclick">Login with Okta_SAML</a> 
 		
 		
 		
@@ -44,6 +44,7 @@
 		<p>4. Ability to pass information into the embeddable via <code>snEmbedWidget.setConfig</code> method</p>
 		<p>5. Dynamic placing of launcher icon</p>
 		<p>6. Dynamic height of embeddable</p>
+		<p>7. Test SAML</p>
 	
 		<p>P.S. To Start the server run <code>npm install</code> and then <code>npm run start</code> from project folder in terminal. Thnaks!!!</p>
 	
@@ -72,17 +73,11 @@
 			usr.style.display = "none";					
 		}
 		</script>
-		<script src="https://bolt1.service-now.com/scripts/sn_csm_ec.js"></script>
+		<script src="https://k8s0124275-node1.sdthunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://bolt1.service-now.com/#44044571db682810d44e5a87dc9619f6",
-	tokenCallBack: getTokenCallBack 
-	});
-	function getTokenCallBack(){
-			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1]; 
-			return Promise.resolve(idToken); 
-	}
-
+	moduleID: "https://k8s0124275-node1.sdthunder.lab3.service-now.com/#6d815a1b49682010f8778cb7fccf0358"
+});
 
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
 /* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
